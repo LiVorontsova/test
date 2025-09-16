@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/test/static/css/main.6dfcb0ae.css",
+    "main.css": "/test/static/css/main.938d7b1a.css",
     "main.js": "/test/static/js/main.f481f707.js",
     "static/js/453.6650d69f.chunk.js": "/test/static/js/453.6650d69f.chunk.js",
+    "static/media/Lato-ExtraBold.ttf": "/test/static/media/Lato-ExtraBold.0d13f4b5f45c14cf4d3c.ttf",
     "static/media/universe_1.webp": "/test/static/media/universe_1.df14562ea6cfee2bff09.webp",
     "static/media/universe_5.webp": "/test/static/media/universe_5.af034c512c41a92b1cab.webp",
     "static/media/earth.png": "/test/static/media/earth.57e6f08fe2a354bfdb26.png",
-    "static/media/Lato-Bold.ttf": "/test/static/media/Lato-Bold.401bd636a7027c695b08.ttf",
     "static/media/universe_4.webp": "/test/static/media/universe_4.2fb702438fcb9fdb9426.webp",
     "static/media/universe_1-min.webp": "/test/static/media/universe_1-min.829b366ef0586d717ae7.webp",
     "static/media/universe_2.webp": "/test/static/media/universe_2.91af1508e96a46aae84b.webp",
@@ -15,12 +15,12 @@
     "static/media/logo.svg": "/test/static/media/logo.f4153131d3955bdfa609912a9f3b5caf.svg",
     "static/media/cart.svg": "/test/static/media/cart.db4f5c85648f5958a4354ad8390a6025.svg",
     "index.html": "/test/index.html",
-    "main.6dfcb0ae.css.map": "/test/static/css/main.6dfcb0ae.css.map",
+    "main.938d7b1a.css.map": "/test/static/css/main.938d7b1a.css.map",
     "main.f481f707.js.map": "/test/static/js/main.f481f707.js.map",
     "453.6650d69f.chunk.js.map": "/test/static/js/453.6650d69f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6dfcb0ae.css",
+    "static/css/main.938d7b1a.css",
     "static/js/main.f481f707.js"
   ]
 }
