@@ -1,0 +1,594 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./fonts/Lato-Bold.ttf") format("truetype");
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to bottom, rgb(13 30 72 / 1), rgb(48 69 113 / 1));
+}
+
+.text {
+  &--bold {
+    font-family: "Lato-Bold", sans-serif;
+  }
+
+  &--700 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+  }
+
+  &--muted {
+    opacity: 0.6;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--pink {
+    color: #ff70d9;
+  }
+
+  &--yellow {
+    color: #ebff00;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.25rem;
+  font-size: 1.375rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s ease;
+
+  &--lg {
+    width: 12rem;
+    height: 3.5rem;
+  }
+
+  &--primary {
+    color: #000;
+    background: #ebff00;
+    border: none;
+
+    &:hover {
+      background: rgb(235 255 0 / 0.6);
+    }
+  }
+
+  &--outline {
+    color: #ebff00;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #ebff00;
+
+    &:hover {
+      color: rgb(235 255 0 / 0.6);
+      border-color: rgb(235 255 0 / 0.6);
+    }
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 0 5rem;
+  background-color: #000;
+
+  &__logo {
+    width: 6.5rem;
+    height: 2.1875rem;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 3.75rem;
+    margin: 0;
+  }
+
+  &__item {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__link {
+    font-size: 18px;
+    text-decoration: none;
+    background: white;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover {
+      background: linear-gradient(
+        to right,
+        rgb(235 255 0 / 1),
+        rgb(255 112 217 / 1)
+      );
+      background-clip: text;
+    }
+  }
+
+  &__cart {
+    fill: #fff;
+
+    &:hover {
+      fill: url("#gradientHover");
+    }
+  }
+
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.3125rem;
+    align-items: center;
+    justify-content: center;
+    width: 1.875rem;
+    height: 1.875rem;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    border: 0;
+
+    &-bar {
+      width: 22px;
+      height: 1.5px;
+      background: #fff;
+    }
+  }
+
+  &__panel {
+    display: contents;
+  }
+
+  &__close {
+    display: none;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 5.7rem 5.625rem 7.375rem 5rem;
+  color: rgb(255 255 255 / 1);
+  background-image: url("./images/earth.png"),
+    linear-gradient(to left, rgb(0 0 0 / 0), rgb(15 20 32 / 0.79)),
+    url("./images/universe_1.webp");
+  background-repeat: no-repeat;
+  background-position: right 5% top 65%, left, center;
+  background-size: 327px 367px, cover, cover;
+
+  &__title {
+    max-width: 43rem;
+    margin: 0 0 1.375rem;
+    font-size: 72px;
+    line-height: 100%;
+  }
+
+  &__subtitle {
+    margin: 0 0 1.375rem;
+    font-size: 32px;
+  }
+}
+
+.offers {
+  padding: 3.625rem 5rem;
+
+  &__title {
+    margin: 0;
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3.875rem;
+  }
+
+  &__button {
+    display: block;
+    padding: 0;
+    margin-top: 1rem;
+    font-size: 20px;
+    color: rgb(235 255 0 / 1);
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: rgb(235 255 0 / 0.6);
+    }
+  }
+
+  &__summary {
+    margin-top: 1rem;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  &__description {
+    display: -webkit-box;
+    margin: 0;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    font-size: 20px;
+    color: rgb(255 255 255 / 1);
+    -webkit-box-orient: vertical;
+  }
+}
+
+.offers__btn-text--less {
+  display: none;
+}
+
+.offers__readmore[open] .offers__description {
+  display: inline-block;
+}
+
+.offers__readmore[open] .offers__btn-text--more {
+  display: none;
+}
+
+.offers__readmore[open] .offers__btn-text--less {
+  display: inline;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 100%;
+  flex-basis: 100%;
+  gap: 1.375rem;
+  min-width: 0;
+  background-image: linear-gradient(
+      to left,
+      rgb(0 0 0 / 0),
+      rgb(15 20 32 / 0.79)
+    ),
+    var(--card-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.625rem;
+
+  --pad-top: 2.25rem;
+  --pad-left: 2.25rem;
+  --pad-bottom: 2.25rem;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+    padding: var(--pad-top) 1.875rem var(--pad-bottom) var(--pad-left);
+  }
+
+  &--small {
+    flex-basis: calc((100% - 2.5rem) / 2);
+
+    --pad-top: 3.125rem;
+    --pad-bottom: 2.25rem;
+    --pad-left: 2.25rem;
+  }
+
+  &--large {
+    --pad-top: 2.25rem;
+    --pad-bottom: 2.3125rem;
+    --pad-left: 2.25rem;
+  }
+
+  &__title {
+    max-width: 38rem;
+    font-size: 4.625rem;
+    line-height: 100%;
+    color: #fff;
+    white-space: pre-wrap;
+  }
+
+  &--small &__title {
+    max-width: 26rem;
+    font-size: 2.875rem;
+  }
+
+  &__subtitle {
+    font-size: 1.625rem;
+    color: #fff;
+  }
+
+  &--small &__subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.footer {
+  padding-bottom: 1.25rem;
+  background-color: rgb(0 0 0 / 1);
+
+  &__content {
+    text-align: center;
+  }
+
+  &__rocket {
+    margin: 0 auto 0.5rem;
+  }
+
+  &__title {
+    font-size: 18px;
+    color: rgb(235 255 0 / 1);
+  }
+}
+
+@media (width <= 1247px) {
+  .header {
+    padding: 0 1.875rem;
+
+    &__logo {
+      width: 71px;
+      height: 24px;
+    }
+
+    &__menu {
+      margin-right: 1.25rem;
+    }
+  }
+
+  .main {
+    padding: 6.25rem 1.875rem;
+    background-position: right -20% top 65%, left, right;
+    background-size: 300px 336px, cover, cover;
+
+    &__title {
+      max-width: 25rem;
+      font-size: 48px;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+    }
+  }
+
+  .offers {
+    padding: 3.5rem 1.875rem;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__wrapper {
+      gap: 1.875rem;
+      padding: 1.875rem 0 3.5rem;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__button {
+      font-size: 16px;
+    }
+  }
+
+  .card {
+    flex-basis: calc((100% - 2.5rem) / 2);
+
+    --pad-top: 6.75rem;
+    --pad-left: 1.625rem;
+    --pad-bottom: 1.625rem;
+
+    &__title {
+      max-width: 16.875rem;
+      font-size: 2.5rem;
+    }
+
+    &--small &__title {
+      font-size: 2.5rem;
+    }
+
+    &__subtitle {
+      max-width: 17.25rem;
+      overflow: hidden;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+
+    &--small &__subtitle {
+      font-size: 16px;
+    }
+  }
+
+  .button {
+    font-size: 16px;
+
+    &--lg {
+      width: 10rem;
+      height: 2rem;
+    }
+  }
+
+  .footer {
+    &__rocket {
+      margin: 0;
+    }
+  }
+}
+
+@media (width <= 767px) {
+  .header {
+    height: 3rem;
+    padding: 0 1.25rem;
+
+    &__logo {
+      width: 71px;
+      height: 24px;
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0.75rem;
+    }
+
+    &__toggle {
+      display: inline-flex;
+    }
+
+    &__panel {
+      position: fixed;
+      top: 3rem;
+      right: 0;
+      left: 0;
+      display: block;
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(-0.5rem);
+      transition: 0.3s ease;
+    }
+
+    &__nav {
+      padding: 1.25rem 1rem;
+      background-color: rgb(13 30 72 / 0.9);
+      transform: translateY(-0.5rem) scale(0.98);
+      transition: 0.3s ease;
+    }
+
+    &__close {
+      position: fixed;
+      top: 0.3125rem;
+      right: 1rem;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background: none;
+      border: 0;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 23px;
+        height: 1.5px;
+        content: "";
+        background: #fff;
+        transform-origin: center;
+        transition: 0.3s ease;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(35deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-35deg);
+      }
+    }
+  }
+
+  .header--menu-open {
+    .header__toggle {
+      display: none;
+    }
+
+    .header__close {
+      display: inline-flex;
+    }
+
+    .header__panel {
+      visibility: visible;
+      pointer-events: auto;
+      opacity: 1;
+      transform: none;
+      transition: 0.3s ease;
+    }
+
+    .header__nav {
+      opacity: 1;
+      transform: none;
+      transition: 0.3s ease;
+    }
+  }
+
+  .main {
+    align-items: center;
+    padding: 15.625rem 2.125rem 2.75rem;
+    background-image: url("./images/earth.png"),
+      linear-gradient(to left, rgb(0 0 0 / 0), rgb(15 20 32 / 0.79)),
+      url("./images/universe_1-min.webp");
+    background-repeat: no-repeat;
+    background-position: 50% -65%, center, center;
+    background-size: 299px 336px, cover, cover;
+
+    &__title {
+      font-size: 36px;
+      text-align: center;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+    }
+  }
+
+  .offers {
+    padding: 3.125rem 1.25rem;
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__wrapper {
+      padding-bottom: 3.125rem;
+    }
+
+    &__description {
+      font-size: 14px;
+    }
+
+    &__button {
+      margin-top: 1.25rem;
+      font-size: 14px;
+    }
+  }
+
+  .card {
+    flex-basis: 100%;
+
+    --pad-top: 6.25rem;
+    --pad-bottom: 2rem;
+  }
+
+  .footer {
+    &__rocket {
+      margin: 0;
+    }
+  }
+}
