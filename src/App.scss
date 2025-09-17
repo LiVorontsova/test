@@ -2,14 +2,14 @@
   font-family: "Lato";
   font-style: normal;
   font-weight: normal;
-  src: url("./fonts/Lato-Regular.ttf") format("truetype");
+  src: url("./fonts/Lato-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Lato-Bold";
   font-style: normal;
   font-weight: normal;
-  src: url("./fonts/Lato-Bold.ttf") format("truetype");
+  src: url("./fonts/Lato-ExtraBold.ttf.woff") format("woff");
 }
 
 body {
@@ -21,6 +21,7 @@ body {
 .text {
   &--bold {
     font-family: "Lato-Bold", sans-serif;
+    font-weight: 800;
   }
 
   &--700 {

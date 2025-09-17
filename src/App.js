@@ -134,7 +134,7 @@ const App = () => {
             imageURL={universe_5}
           />
         </div>
-        <h2 className="offers__title">Embark on a space journey</h2>
+        <h2 className="offers__title text text--bold">Embark on a space journey</h2>
 
         <details className="offers__readmore">
           <summary className="offers__summary">
@@ -151,10 +151,10 @@ const App = () => {
               adventure in space. We offer various options for space excursions.
             </p>
             <span className="offers__button">
-              <span className="offers__btn-text offers__btn-text--more">
+              <span className="offers__btn-text offers__btn-text--more text text--bold">
                 Read more
               </span>
-              <span className="offers__btn-text offers__btn-text--less">
+              <span className="offers__btn-text offers__btn-text--less text text--bold">
                 Read less
               </span>
             </span>
